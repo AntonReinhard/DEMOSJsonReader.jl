@@ -1,11 +1,13 @@
 module DEMOSJsonReader
 
-"""
-    hi = hello_world()
-A simple function to return "Hello, World!"
-"""
-function hello_world()
-    return "Hello, World!"
-end
+using DEMOSObjects: DEMOSObjects
+using EzXML: EzXML, eachelement, readxml
+using JSON: JSON
+
+include("parse.jl")
+
+include("distributions/parse.jl")
+include("functions/parse.jl")
+include("likelihoods/parse.jl")
 
 end
